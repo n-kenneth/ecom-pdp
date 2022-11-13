@@ -1,7 +1,11 @@
 .avatar {
-	max-width: 45px;
+	width: 32px;
 	margin-left: 20px;
 	
+	@media (min-width: 991px) {
+		width: 45px;
+	}
+
 	img {
 		width: 100%;
 	}

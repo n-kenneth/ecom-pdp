@@ -6,3 +6,20 @@ body {
 	font-family: 'Kumbh Sans', sans-serif;
 	font-size: 16px;
 }
+
+button {
+	border: none;
+	background: none;
+	cursor: pointer;
+}
+
+ul, ol {
+	list-style: none;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+img {
+	max-width: 100%;
+}

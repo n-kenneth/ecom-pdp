@@ -1,0 +1,57 @@
+.gallery {
+  @media (min-width: 991px) {
+    max-width: 444px;
+    width: 100%;
+  }
+}
+
+
+.main-image {
+  @media(min-width: 991px) {
+    width: 444px;
+    height: 444px;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+
+    img {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.thumbnails {
+  display: flex;
+  margin-left: -4px;
+
+  li {
+      flex: 0 0 auto;
+      width: 89px;
+      height: 89px;
+      position: relative;
+      border-radius: 10px;
+      overflow: hidden;
+      border: 4px solid transparent;
+      cursor: pointer;
+      margin-right: 21px;
+    
+      &:last-child {
+        margin-right: 0;
+      }
+
+      &:hover,
+      &.active {
+        border-color: hsl(26, 100%, 55%);
+        opacity: .8;
+      }
+
+      img {
+        position: absolute;
+        object-fit: cover;
+        height: 100%;
+      }
+  }
+}
