@@ -24,10 +24,26 @@ const ProductGallery = ({ images }) => {
     setActiveImage(main);
   }
 
+  const onNextImageHandle = () => {
+    const activeImageIndex = images.findIndex(image => image.main === activeImage);
+    const nextImage = activeImageIndex === images.length - 1  ? images[0].main : images[activeImageIndex + 1].main;
+    setActiveImage(nextImage);
+  }
+
+  const onPrevImageHandle = () => {
+    const activeImageIndex = images.findIndex(image => image.main === activeImage);
+    const nextImage = activeImageIndex === 0 ? images[images.length - 1].main : images[activeImageIndex - 1].main;
+    setActiveImage(nextImage);
+  }
+
 
   return (
     <div className={classes.gallery}>
-      <ProductMainImage image={activeImage} />
+      <ProductMainImage 
+        isMobile={isMobile}
+        image={activeImage} 
+        onNextImage={onNextImageHandle} 
+        onPrevImage={onPrevImageHandle} />
       { !isMobile && <ProductThumbnails images={images} handleImageChange={handleImageChange} /> }
     </div>
   );

@@ -1,4 +1,6 @@
 .gallery {
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
   @media (min-width: 991px) {
     max-width: 444px;
     width: 100%;
@@ -7,19 +9,22 @@
 
 
 .main-image {
+  position: relative;
+  height: 300px;
+  @media (min-width: 767px) {
+    height: 444px;
+  }
   @media(min-width: 991px) {
     width: 444px;
-    height: 444px;
     border-radius: 10px;
     overflow: hidden;
-    position: relative;
-
-    img {
-      position: absolute;
-      height: 100%;
-      width: 100%;
-      object-fit: cover;
-    }
+  }
+  & > img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center center;
   }
 }
 
@@ -54,4 +59,27 @@
         height: 100%;
       }
   }
+}
+
+.next,
+.prev {
+  background-color: #fff;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  img {
+    max-width: 32px;
+  }
+}
+.next {
+  right: 15px;
+}
+.prev {
+  left: 15px;
 }
