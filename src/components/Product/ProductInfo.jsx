@@ -1,7 +1,7 @@
 import classes from './Product.module.scss';
 import ProductForm from './ProductForm';
 
-const ProductInfo = ({ product }) => {
+const ProductInfo = ({ product, onSubmit }) => {
 	const { brand, title, description, price } = product;
 	const {sale_price, original_price } = price;
 
@@ -16,7 +16,7 @@ const ProductInfo = ({ product }) => {
 					<span className={classes.price}>${original_price.toFixed(2)}</span>
 				</div>
 			</div>
-			<ProductForm />
+			<ProductForm product={product} onSubmit={onSubmit} />
 		</div>
 	);
 }
