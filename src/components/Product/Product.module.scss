@@ -1,0 +1,135 @@
+$orange: hsl(26, 100%, 55%);
+$black:  hsl(0, 0%, 0%);
+
+.mainProduct {
+	padding-bottom: 100px;
+	@media (min-width: 990px) {
+		margin-top: 50px;
+		display: flex;
+		align-items: flex-start;
+	}
+}
+.container {
+	margin-top: 20px;
+
+	@media (min-width: 990px) {
+		margin-top: 60px;
+		margin-left: 60px;
+		max-width: 450px;
+	}
+	@media (min-width: 1024px) {
+		margin-left: 120px;
+	}
+}
+
+.brand {
+	color: $orange;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: 700;
+	font-size: 14px;
+	margin-bottom: 10px;
+}
+
+.title {
+	color: $black;
+	font-weight: 700;
+	font-size: 25px;
+	line-height: 1.25;
+	margin-bottom: 15px;
+	@media (min-width: 990px) {
+		font-size: 32px;
+	}
+}
+
+.description {
+	color: hsl(219, 9%, 45%);
+	font-size: 15px;
+	margin-bottom: 25px;
+
+	@media (min-width: 990px) {
+		margin-bottom: 20px;
+		font-size: 16px;
+		line-height: 1.5;
+	}
+}
+
+.priceContainer {
+	display: flex;
+	@media (min-width: 990px) {
+		display: block;
+	}
+}
+
+.price {
+	font-weight: bold;
+	font-size: 22px;
+}
+
+.salePrice {
+	display: flex;
+
+	.price {
+		margin-right: 20px;
+		@media (min-width: 990px) {
+			margin-right: 10px;
+		}
+	}
+}
+
+.salePercent {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: hsl(25, 100%, 94%);
+	font-weight: bold;
+	color: $orange;
+	font-size: 16px;
+	min-width: 48px;
+	min-height: 28px;
+	border-radius: 4px;
+}
+
+.originalPrice {
+	margin-left: auto;
+	color: hsl(220, 14%, 75%);
+	@media (min-width: 990px) {
+		margin-top: 5px;
+	}
+	.price {
+		position: relative;
+		font-size: 18px;
+		@media (min-width: 990px) {
+			font-size: 16px;
+		}
+		&:after {
+			content: '';
+			position: absolute;
+			left: 0;
+			width: 100%;
+			height: 2px;
+			top: 50%;
+			transform: translateY(-50%);
+			background-color: hsl(220, 14%, 75%);
+		}
+	}
+}
+
+.productForm {
+	display: flex;
+	flex-direction: column;
+	margin-top: 20px;
+
+	@media (min-width: 990px) {
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+	& > div:first-child {
+		margin-right: 30px;
+	}
+	& > button:last-child {
+		width: 100%
+	}
+
+}

@@ -1,0 +1,36 @@
+.container {
+	background-color: #f7f8fd;
+	border-radius: 10px;
+	display: inline-flex;
+	align-items: center;
+	height: 55px;
+	padding: 0 20px;
+	width: auto;
+	justify-content: space-between;
+	margin-bottom: 20px;
+
+	@media (min-width: 990px) {
+		justify-content: flex-start;
+	}
+
+	button {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 32px;
+		height: 100%;
+	}
+
+	input {
+		outline: 0;
+		border: none;
+		font-size: 16px;
+		font-weight: bold;
+		width: 40px;
+		text-align: center;
+		background-color: #f7f8fd;
+		&:focus {
+			outline: 0;
+		}
+	}
+}

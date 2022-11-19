@@ -1,9 +1,14 @@
 import ProductGallery from "./ProductGallery/ProductGallery"
-import { productImages } from "../utilities/images";
+import ProductInfo from "./ProductInfo";
+
+import { product } from "../utilities/product";
+
+import classes from './Product.module.scss';
 
 const Product = () => {
-  return <div>
-    <ProductGallery images={productImages} />
+  return <div className={classes.mainProduct}>
+    <ProductGallery images={product.images} />
+    <ProductInfo product={product} />
   </div>
 }
 

@@ -2,6 +2,7 @@
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
   @media (min-width: 991px) {
+    margin: 0 0 0 50px;
     max-width: 444px;
     width: 100%;
   }
@@ -15,6 +16,7 @@
     height: 444px;
   }
   @media(min-width: 991px) {
+    margin-bottom: 30px;
     width: 444px;
     border-radius: 10px;
     overflow: hidden;

@@ -1,0 +1,16 @@
+.button {
+	border-radius: 10px;
+	background-color: hsl(26, 100%, 55%);
+	height: 55px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	color: #fff;
+	font-size: 16px;
+	padding: 0 50px;
+	img {
+		filter: brightness(0) invert(1);
+		max-width: 18px;
+		margin-right: 10px;
+	}
+}
