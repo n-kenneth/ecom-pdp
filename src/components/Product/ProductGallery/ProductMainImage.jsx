@@ -3,8 +3,8 @@ import classes from './ProductGallery.module.scss';
 import NextIcon from '../../../assets/icon-next.svg';
 import PrevIcon from '../../../assets/icon-previous.svg';
 
-const ProductMainImage = ({ isMobile, image, onNextImage, onPrevImage }) => (
-  <div className={classes['main-image']}>
+const ProductMainImage = ({ isMobile, image, onNextImage, onPrevImage, open }) => (
+  <div className={classes['main-image']} onClick={open}>
     <img src={image} />
     { isMobile && <>
       <div className={classes.next} onClick={onNextImage}><img src={NextIcon} /></div>

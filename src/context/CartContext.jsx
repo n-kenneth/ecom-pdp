@@ -8,7 +8,8 @@ const cartState ={
 const CartContext = createContext({
   lineItems: [],
   totalAmount: 0,
-  add: () => {}
+  add: () => {},
+  remove: () => {}
 });
 
 const totalAmount = (lineItems) => {
@@ -71,9 +72,10 @@ export const CartContextProvider = ({ children }) => {
   }
 
   const cartContext = {
-    lineItems: state.lineItem,
+    lineItems: state.lineItems,
     totalAmount: state.totalAmount,
-    add: handleAddToCart
+    add: handleAddToCart,
+    remove: handleRemoveItem
   }
 
   return (

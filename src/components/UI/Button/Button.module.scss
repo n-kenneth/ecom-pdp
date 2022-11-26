@@ -8,6 +8,9 @@
 	color: #fff;
 	font-size: 16px;
 	padding: 0 50px;
+	&:hover {
+		background-color: hsla(26, 100%, 55%, 0.726);
+	}
 	img {
 		filter: brightness(0) invert(1);
 		max-width: 18px;

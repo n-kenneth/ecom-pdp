@@ -16,7 +16,7 @@ const ProductInfo = ({ product, onSubmit }) => {
 					<span className={classes.price}>${original_price.toFixed(2)}</span>
 				</div>
 			</div>
-			<ProductForm product={product} onSubmit={onSubmit} />
+			<ProductForm product={product} />
 		</div>
 	);
 }

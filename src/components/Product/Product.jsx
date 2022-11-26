@@ -1,30 +1,33 @@
+import { useState } from "react";
 import ProductGallery from "./ProductGallery/ProductGallery"
 import ProductInfo from "./ProductInfo";
 
 import { product } from "../utilities/product";
 
 import classes from './Product.module.scss';
-import { useCallback, useContext } from "react";
-import CartContext from "../../context/CartContext";
+import Modal from "../Modal/Modal";
 
 const Product = () => {
-  console.log('product created');
-  const cartCtx = useContext(CartContext);
+  const [showLightbox, setShowLightbox] = useState(false);
 
-  const handleSubmit = useCallback( event => {
-    console.log(event)
-    event.preventDefault();
-		console.log(product.id);
-		cartCtx.add({
-			...product,
-			quantity: 1
-		})
-  });
+  const handleOpenLightbox = () => {
+    setShowLightbox(true);
+  }
+
+  const handleCloseLightbox = () => {
+    setShowLightbox(false);
+  }
+
+
+
 
   return <div className={classes.mainProduct}>
-   
-    <ProductGallery images={product.images} />
-    <ProductInfo product={product} onSubmit={handleSubmit} />
+    <ProductGallery images={product.images} open={handleOpenLightbox} />
+    <ProductInfo product={product} />
+    {showLightbox && 
+    <Modal onClose={handleCloseLightbox}>
+      <ProductGallery images={product.images} />
+    </Modal> }
   </div>
 }
 
