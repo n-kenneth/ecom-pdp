@@ -6,7 +6,7 @@ import WindowContext from '../../../context/WindowContext';
 
 import classes from './ProductGallery.module.scss';
 
-const ProductGallery = ({ images, open }) => {
+const ProductGallery = ({ images, open, isPopup }) => {
 
   const [activeImage, setActiveImage] = useState(images[0].main);
 
@@ -38,13 +38,15 @@ const ProductGallery = ({ images, open }) => {
 
 
   return (
-    <div className={classes.gallery}>
+    <div className={isPopup ? `${classes.gallery} ${classes.popup}` : `${classes.gallery}`}>
       <ProductMainImage 
         isMobile={isMobile}
         image={activeImage} 
-        open={open}
+        open={!isMobile ? open : null}
         onNextImage={onNextImageHandle} 
-        onPrevImage={onPrevImageHandle} />
+        onPrevImage={onPrevImageHandle}
+        isPopup={isPopup}
+        />
       { !isMobile && <ProductThumbnails 
       images={images}
       handleImageChange={handleImageChange}

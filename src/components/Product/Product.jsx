@@ -19,14 +19,12 @@ const Product = () => {
   }
 
 
-
-
   return <div className={classes.mainProduct}>
     <ProductGallery images={product.images} open={handleOpenLightbox} />
     <ProductInfo product={product} />
     {showLightbox && 
     <Modal onClose={handleCloseLightbox}>
-      <ProductGallery images={product.images} />
+      <ProductGallery images={product.images} isPopup={true} />
     </Modal> }
   </div>
 }

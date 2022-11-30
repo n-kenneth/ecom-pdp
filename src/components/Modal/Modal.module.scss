@@ -9,22 +9,25 @@
 }
 
 .modal {
+
   position: fixed;
-  top: 20vh;
-  left: 5%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: auto;
   padding: 1rem;
   border-radius: 14px;
   z-index: 30;
-  animation: slide-down 300ms ease-out forwards;
+  // animation: slide-down 300ms ease-out forwards;
 }
 
-@media (min-width: 768px) {
-  .modal {
-    width: 40rem;
-    left: calc(50% - 20rem);
-  }
-}
+// @media (min-width: 768px) {
+//   .modal {
+//     width: auto;
+//     left: 50%;
+//     transform: translateX(-50%);
+//   }
+// }
 
 @keyframes slide-down {
   from {
@@ -34,5 +37,22 @@
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+.modalClose {
+  display: flex;
+  margin-left: auto;
+  width: 32px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  &:hover {
+    svg {
+      stroke: hsl(26, 100%, 55%);
+    }
+  }
+  svg {
+    max-width: 32px;
+    stroke: #fff;
   }
 }
