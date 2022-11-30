@@ -16,7 +16,7 @@ const Header = () => {
 	return (
 		<header className={classes.header}>
 			{isMobile && <button className={classes['burger-menu']} onClick={() => setShowMenu(true)}><img src={BurgerMenu} alt="Burger Menu" /></button>}
-			<a href="" className={classes.logo}>
+			<a href="#" className={classes.logo}>
 				<img src={Logo} alt="sneakers" />
 			</a>
 			<NavigationList isMobile={isMobile} showMenu={showMenu} closeMenu={() => setShowMenu(false) } />

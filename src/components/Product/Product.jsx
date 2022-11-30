@@ -19,7 +19,7 @@ const Product = () => {
   }
 
 
-  return <div className={classes.mainProduct}>
+  return <div className={classes.mainProduct} role="main">
     <ProductGallery images={product.images} open={handleOpenLightbox} />
     <ProductInfo product={product} />
     {showLightbox && 

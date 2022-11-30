@@ -8,7 +8,7 @@ const ProductInfo = ({ product, onSubmit }) => {
 	return (
 		<div className={classes.container}>
 			<div className={classes.brand}>{brand}</div>
-			<div className={classes.title}>{title}</div>
+			<h1 className={classes.title}>{title}</h1>
 			<div className={classes.description}>{description}</div>
 			<div className={classes.priceContainer}>
 				{sale_price && <div className={classes.salePrice}><div className={classes.price}>${sale_price.toFixed(2)}</div> <span className={classes.salePercent}>{sale_price / original_price * 100}%</span></div>}
