@@ -28,9 +28,9 @@ const Quantity = forwardRef((props, ref) => {
 
 	return (
 		<div className={classes.container}>
-			<button onClick={() => dispatch({ type: 'DECREMENT'})} type="button"><img src={MinusIcon} /></button>
+			<button onClick={() => dispatch({ type: 'DECREMENT'})} type="button"><img src={MinusIcon} alt="minus icon" /></button>
 			<input value={state.quantity} onChange={handleChange} ref={ref} />
-			<button onClick={() => dispatch({ type: 'INCREMENT'})} type="button"><img src={PlusIcon} /></button>
+			<button onClick={() => dispatch({ type: 'INCREMENT'})} type="button"><img src={PlusIcon} alt="plus icon" /></button>
 		</div>
 	)
 });

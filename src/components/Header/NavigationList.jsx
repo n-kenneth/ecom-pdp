@@ -9,7 +9,7 @@ const NavigationList = ({ isMobile, showMenu, closeMenu }) => {
 		<nav>
 			{showMenu && <div className={classes.backdrop} onClick={closeMenu}></div>}
 			<ul className={`${classes.navigation} ${navClasses}`}>
-				{isMobile && <li><button className={classes['close-button']} onClick={closeMenu}><img src={CloseIcon} /></button></li>}
+				{isMobile && <li><button className={classes['close-button']} onClick={closeMenu}><img src={CloseIcon} alt="Close icon" /></button></li>}
 				<li><a href="">Collections</a></li>
 				<li><a href="">Men</a></li>
 				<li><a href="">Women</a></li>

@@ -24,7 +24,7 @@ const Cart = () => {
 	return (
 		<div className={classes.cart}>
 			<div className={classes.cartIcon} onClick={toggleCart}>
-				<img src={CartICon} />
+				<img src={CartICon} alt="Cart Icon" />
 				{totalItems && <span>{totalItems}</span>}
 			</div>
 

@@ -5,7 +5,7 @@ const ProductThumbnails = ({ images, handleImageChange, activeImage }) => {
     <ul className={classes.thumbnails}>
       {images.map((image, index) => {
         const isActive = image.main === activeImage;
-        return <li key={'product-' + index} className={`${isActive ? classes.active : '' }`}><img src={image.thumbnail} onClick={() => handleImageChange(index)} /></li> 
+        return <li key={'product-' + index} className={`${isActive ? classes.active : '' }`}><img alt="product image thumbnail" src={image.thumbnail} onClick={() => handleImageChange(index)} /></li> 
       })}  </ul>
   )
 }

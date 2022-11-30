@@ -24,7 +24,7 @@ const ProductForm = ({ product }) => {
 	return (
 		<form className={classes.productForm} onSubmit={handleSubmit}>
 			<Quantity ref={quantityRef} />
-			<Button type="submit"><img src={CartIcon} /> Add to Cart</Button>
+			<Button type="submit"><img src={CartIcon} alt="Cart Icon" /> Add to Cart</Button>
 		</form>
 	)
 }

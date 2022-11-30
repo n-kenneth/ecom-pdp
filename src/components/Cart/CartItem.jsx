@@ -9,7 +9,7 @@ const CartItem = ({ item, remove }) => {
   return (
     <div className={classes.carItem}>
       <div className={classes.cartImage}>
-        <img src={images[0].main} />
+        <img src={images[0].main} alt="product image" />
       </div>
       <div className={classes.cartInfo}>
         <div className={classes.cartTitle}>{title}</div>
@@ -18,7 +18,7 @@ const CartItem = ({ item, remove }) => {
         </div>
       </div>
       <div className={classes.cartDelete} onClick={remove}>
-        <img src={DeleteIcon} />
+        <img src={DeleteIcon} alt="delete icon" />
       </div>
     </div>
   )
